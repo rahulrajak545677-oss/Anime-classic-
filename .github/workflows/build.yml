@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Unzip project
+      - name: Unzip project (only if a zip is present)
         run: |
           z=$(ls -1 *.zip 2>/dev/null | head -n 1 || true)
           if [ -n "$z" ]; then
@@ -28,7 +28,8 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: 8.7
-      - run: gradle assembleDebug --no-daemon
+      - name: Build debug APK
+        run: gradle assembleDebug --no-daemon -Dorg.gradle.jvmargs="-Xmx4g -XX:MaxMetaspaceSize=1g"
       - uses: actions/upload-artifact@v4
         with:
           name: ClassicAnime-debug-apk
