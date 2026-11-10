@@ -1,0 +1,4 @@
+[
+  {"id":"bbb-hls","title":"Big Buck Bunny (HLS demo)","year":2008,"poster":null,"url":"https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8","description":"Open Blender short used to test the player.","license":"CC-BY Blender Foundation"},
+  {"id":"bbb-mp4","title":"Big Buck Bunny (MP4 demo)","year":2008,"poster":null,"url":"https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4","description":"Open Blender short used to test the player.","license":"CC-BY Blender Foundation"}
+]
